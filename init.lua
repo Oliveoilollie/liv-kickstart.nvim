@@ -430,7 +430,8 @@ require('lazy').setup({
       end, { desc = '[S]earch [/] in Open Files' })
 
       --shortcut for the terminal
-      vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>')
+      vim.keymap.set('n', '<leader>t', ':ToggleTerm %<CR>')
+
       -- Shortcut for searching your Neovim configuration files
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
