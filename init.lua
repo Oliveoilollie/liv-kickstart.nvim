@@ -254,7 +254,10 @@ require('lazy').setup({
 
   --hopefully a cool start screen shows up
   { 'https://github.com/startup-nvim/startup.nvim' },
+
+  { 'akinsho/toggleterm.nvim', version = '*', config = true },
   -- Here is a more advanced example where we pass configuration
+
   -- options to `gitsigns.nvim`. This is equivalent to the following Lua:
   --    require('gitsigns').setup({ ... })
   --
@@ -363,6 +366,9 @@ require('lazy').setup({
       --
       --starts the startup
       require('startup').setup()
+
+      --starts the terminal stuff
+      require('toggleterm').setup {}
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
       require('telescope').setup {
@@ -417,6 +423,8 @@ require('lazy').setup({
         }
       end, { desc = '[S]earch [/] in Open Files' })
 
+      --shortcut for the terminal
+      vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>')
       -- Shortcut for searching your Neovim configuration files
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
