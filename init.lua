@@ -197,6 +197,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+--file picker keymap
+vim.keymap.set('n', '<space>fb', ':Telescope file_browser<CR>')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -249,11 +252,14 @@ require('lazy').setup({
   --adds cool discord stuff
   { 'https://github.com/IogaMaster/neocord', event = 'VeryLazy' },
 
-  --adds a file tree
+  --adds a file tree (old one lol)
   { 'https://github.com/nvim-tree/nvim-tree.lua' },
 
   --hopefully a cool start screen shows up
   { 'https://github.com/startup-nvim/startup.nvim' },
+
+  --telescope file picker
+  { 'nvim-telescope/telescope-file-browser.nvim' },
 
   { 'akinsho/toggleterm.nvim', version = '*', config = true },
   -- Here is a more advanced example where we pass configuration
