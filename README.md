@@ -1,5 +1,7 @@
 # kickstart.nvim
 
+# HEY HEY. this is archived and no longer maintained - go here!!! - https://github.com/Oliveoilollie/nvim
+
 ## Introduction
 
 A starting point for Neovim that is:
